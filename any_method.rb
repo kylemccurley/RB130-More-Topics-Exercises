@@ -7,10 +7,7 @@
 =end
 
 def any?(array)
-  array.each do |num|
-    return true if yield num
-  end
-
+  array.each { |num| return true if yield num }
   false
 end
 
